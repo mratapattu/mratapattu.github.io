@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Portfolio Sakitha Navod</title>
+		<title>Portfolio Manula Atapattu</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -23,15 +23,14 @@
 					</header>
 
 				<!-- Nav -->
-					<nav id="nav">
+					<!-- <nav id="nav">
 
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/sakitha-amarsinghe/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://www.youtube.com/channel/UCnXO5pQCNA7NwCBpLpCvmGA" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
-							<li><a href="https://github.com/sakithanavod" class="icon brands fa-github"><span class="label">GitHub Personal</span></a></li>
-							<li><a href="https://github.com/ThatsUnreal" class="icon brands fa-github"><span class="label">GitHub Youtube</span></a></li>
+							<li><a href="https://www.linkedin.com/in/manula-atapattu/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.youtube.com/channel/UCgUAw1WMT9jylQFRf-Mjkyg" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+							<li><a href="https://github.com/manulaAtapattu" class="icon brands fa-github"><span class="label">GitHub(Old)</span></a></li>
 						</ul>
-					</nav>
+					</nav> -->
 
 				<!-- Main -->
 					<div id="main">
@@ -45,28 +44,64 @@
 								<div class="image main"><img src="images/nero_02.jpg" alt="" /></div>
 								<p>NERO is a single-player stealth action game set in the jungles of asia. Track down and eliminate your targets deep into enemy territories and sabotage heavy guarded military bases with all the tools at your disposal. Upgrade your skills and experience this escapading campaign of shadows and fire!</p>
 
-								<p><b>ROLE:</b>Gameplay Programmer</p>	
+								<p><b>ROLE : Lead Programmer </b>
+								- By the end of the project, i was incharge of nearly all the systems in Nero, like Gameplay prgramming, AudioVisual Integration, Ui, store integrations and many more.</p>	
 								<p><b>RESPONSIBILITIES:</b> 
 									<ul>
-										<li>Shooting mechanics</li>
-										<li>User interface intergation</li>
-										<li>Mission system</li>
-										<li>Steam intergation</li>
+										<li><h4>Overall AI behavior System</h4></li>
+											<p>
+												I programmed the overall ai of enemies. These include the patrol states, searching state and in combat state. I focused on details like how an enemy reacts to multiple noises, gun shots nearly missing the enemy, and enemies cheating to know the location of the player when such events happen consecutivly.
+												I aslo tweaked enemy ai variables based on difficulty. For example, one stone throw will make the enemy start searching, but multiple stone throws within a short period will make the enemy focus on player location more and eventually auto-detect the enemy. For example, how quickly and what range the player detects enemy, the detection rate changing when half of the body is covered etc. 
+												I worked on enemy placements so as to promote stelath gameplay, ex- how long an enemy stays at a certain point during its patrol, so that the player has time to takeout another enemy etc. I understand my ai system is no way perfect, but it was a decent level.
+											</p>
+										<li><h4>Character actions</h4></li>
+											<p>
+												I prgrammed many charaction and enemy actions. These include throwing grenades, placing mines, aiming guns,takedowns, run-slide, climbing ladders, looting corpses etc. I also worked on things like foot and hand IKs, aligning gun with hands, animation blueprints etc.
+											</p>
+										<li><h4>Shooting mechanics</h4></li>
+										<p>
+											I programmed things like the camera-gun alignments, aiming zoom in, gun-recoil of different guns, bullet drops, enemy gun shoot direction alignments etc. For example, how the recoil should increase with time, but the cached recoil should reduce at a faster rate etc.
+											I also worked on making the shooting gameplay to feel more satisfying.
+										</p>
+										<li><h4>Animation, Sound Integrations</h4></li>
+										<p>
+											I integrated animations and sounds into the gampelay for many gameplay actions etc. I worked on other sound features like balancing sounds. For example - what is the ratio of volume between gun shots and background music, how the background music reduces when firing the rifle etc.
+										</p>
+										<li><h4>User interface intergations</h4></li>
+										<p>
+											During the project, the existing UI programmer left the project and i begain changes to UI. I did changes in neraly all the UI used in the game like Player HUD, control menus(changing key maps), skill point menus, in-game player huds/billboards etc.
+										</p>
+										<li><h4>Mission Score and Player Skill Implementation</h4></li>
+										<p>
+											I introduced and implemented a basic skill system for the game. At the end of the mission, you get skill points based on your performace. Performance metrics inlude shooting accuracy, enemy detections, takedowns, headshots etc. Certain challenges during this section was how to allocate higher mission score between a stealth approach VS a gun blazing approach.
+										</p>
+										<li><h4>Game Difficulty Implementation</h4></li>
+										<p>
+											I introduced and implemented different difficulty modes. The factors that changed with difficutly were weapon damage and player health, enemy ai, ability to get skill points, the value of timers in timed events etc. Challeneges faced were making sure the game was completeable even at very high difficulties, make the ai realistic/believable at both difficulty extremes('easy' VS 'brutal'). Another challenege i faced was to make sure that increasing the difficulty wasn't just enemies having more health, but the enemies being more intelligent.
+										</p>
+										<li><h4>Performance Optimizations</h4></li>
+										<p>
+											Optimization included tweaking LODs of static meshes and foliage, Blueprint optimization by reducing the number of line traces/instructions per frame and reducing the instruction count in material blueprint, Lighting and shader optimization, using optimization viewmodes and debugging tools to find bottlenecks etc.
+										<li><h4>Steam and Epic store intergation</h4></li>
+										<p>
+											I was involved in integrating the game with the steam and epic game Store. The steam version was delisted around january 2024 for certain reasons inside the company (naming conflict with another company). After released, i uploaded patches with bug fixes for both steam and epic, replied to public comments and posts regarding the game etc.
+										</p>
+										<li><h4>Version Control - Perforce</h4></li>
 									  </ul>  
 								</p>	
 								</section>
-
+								<div>
 								<ul class="actions special">
-									<li><a href="https://store.steampowered.com/app/1448610/NERO/" class="button">Show</a></li>
-								</ul>
-
+									<li><a href="https://store.epicgames.com/en-US/p/nero-0011a8" class="button">Epic Games Store Link</a></li>
+									<li><a href="https://www.youtube.com/watch?v=DwujCCf_46w" class="button">Full Gameplay YouTube Link</a></li>
+								</ul></div>
 					</div>
 
 				
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; sakithanavod</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; manulaatapattu</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
