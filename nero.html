@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio Manula Atapattu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="styles.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">PORTFOLIO</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>NIRO</h1>
+									<h4>Unreal Engine 4</h4>
+								</header>
+								<p>
+								<div class="slider">
+									<div class="slider-container">
+										<img src="images/nero1.jpg" alt="Image 1">
+										<img src="images/nero2.jpg" alt="Image 2">
+										<img src="images/nero5.png" alt="Image 3">
+										<img src="images/nero4.png" alt="Image 4">
+										<img src="images/nero7.png" alt="Image 5">
+										<img src="images/nero6.png" alt="Image 6">
+										<img src="images/nero8.png" alt="Image 7">
+									</div>
+									<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+									<button class="next" onclick="moveSlide(1)">&#10095;</button>
+								</div>
+								
+								</p>
+
+								<p><div>
+									<ul class="actions special">
+										<li><a href="https://store.steampowered.com/app/1448610/NIRO/" class="button" >Steam Store Link</a></li>
+										<li><a href="https://www.youtube.com/watch?v=DwujCCf_46w" class="button">Full Gameplay YouTube Link</a></li>
+									</ul></div></p>
+
+
+								<p>NIRO is a single-player stealth action game set in the jungles of asia. Track down and eliminate your targets deep into enemy territories and sabotage heavy guarded military bases with all the tools at your disposal. Upgrade your skills and experience this escapading campaign of shadows and fire! Note that the game name was changed to 'NIRO' from 'NERO' in June 2024.</p>
+
+								<p><b>ROLE : Lead Programmer </b>
+								- I started working on the project as a developer in 2019 and became the lead developer in 2021. By the end, I was responsible for the majority of the game systems, like Gameplay programming, AudioVisual Integration, User Interfaces, online store management, technical art and more.</p>	
+								<p><b>RESPONSIBILITIES:</b> 
+									<ul>
+										<li><h4>Overall AI behavior System</h4></li>
+											<p>
+												I programmed the overall ai of enemies. These include the patrol state, searching state and in-combat state. I focused on details like how an enemy reacts to consecutive noises, gun shots nearly missing the enemy, and enemies cheating to know the location of the player when such events happen consecutively. I created the cover system for enemies where enemies find cover near them. This system include features like considering player position when finding cover, leaning out and shooting, removing cover when player goes out of view etc.
+												I also tweaked enemy ai variables based on difficulty. For example, one stone throw will make the enemy start searching, but multiple stone throws within a short period will make the enemy focus on player location more and eventually auto-detect the enemy. For example, how quickly and what range the player detects enemy, the detection rate changing when half of the body is covered etc. 
+												I worked on enemy placements so as to promote stealth gameplay, ex- how long an enemy stays at a certain point during its patrol, so that the player has time to takeout another enemy etc. I understand my ai system is no way perfect, but it was a decent level. I worked on acquiring different recordings of enemy dialogues and integrated it into the game.
+											</p>
+										<li><h4>Character actions</h4></li>
+											<p>
+												I programmed many character and enemy actions. These include throwing grenades, placing mines, aiming guns,takedowns, run-slide, climbing ladders, looting corpses etc. I also worked on things like foot and hand IKs, proning(on inclined planes etc), aligning gun with hands, animation blueprints etc.
+											</p>
+										<li><h4>Shooting mechanics</h4></li>
+										<p>
+											I programmed things like the camera-gun alignments, aiming zoom in, gun-recoil of different guns, bullet drops, enemy gun shoot direction alignments etc. For example, how the recoil should increase with time, but the cached recoil should reduce at a faster rate etc.
+											I also worked on making the shooting gameplay to feel more satisfying.
+										</p>
+										<li><h4>Animation, Sound Integrations</h4></li>
+										<p>
+											I integrated animations and sounds into the gampelay for many gameplay actions etc. I worked on other sound features like balancing sounds. For example - what is the ratio of volume between gun shots and background music, how the background music reduces when firing the rifle etc.
+										</p>
+										<li><h4>User interface integrations</h4></li>
+										<p>
+											During the project, the existing UI programmer left the project and i begin changes to UI. I did changes in nearly all the UI used in the game like Player HUD, control menus(changing key maps), skill point menus, in-game player HUDs/billboards etc.
+										</p>
+										<li><h4>Mission Score and Player Skill Implementation</h4></li>
+										<p>
+											I introduced and implemented a basic skill system for the game. At the end of the mission, you get skill points based on your performance. Performance metrics include shooting accuracy, enemy detections, takedowns, head-shots etc. Certain challenges during this section was how to allocate higher mission score between a stealth approach VS a gun blazing approach.
+										</p>
+										<li><h4>Game Difficulty Implementation</h4></li>
+										<p>
+											I introduced and implemented different difficulty modes. The factors that changed with difficulty were weapon damage and player health, enemy ai, ability to get skill points, the value of timers in timed events etc. Challenges faced were making sure the game was completable even at very high difficulties, make the ai realistic/believable at both difficulty extremes('easy' VS 'brutal'). Another challenge i faced was to make sure that increasing the difficulty wasn't just enemies having more health, but the enemies being more intelligent.
+										</p>
+										<li><h4>Performance Optimizations</h4></li>
+										<p>
+											Optimization included tweaking LODs of static meshes and foliage, Blueprint optimization by reducing the number of line traces/instructions per frame and reducing the instruction count in material blueprint, Lighting and shader optimization, using optimization view-modes and debugging tools to find bottlenecks etc.
+										<li><h4>Steam and Epic store integration</h4></li>
+										<p>
+											I was involved in integrating the game with the steam and epic game Store. The steam version was de-listed around january 2024 for certain reasons inside the company (naming conflict with another company). After released, i uploaded patches with bug fixes for both steam and epic, replied to public comments and posts regarding the game etc.
+										</p>
+										<li><h4>Version Control - Perforce</h4></li>
+									  </ul>  
+								</p>	
+								</section>
+								
+					</div>
+
+				
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; manulaatapattu</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src='script.js'></script>
+
+	</body>
+</html>
