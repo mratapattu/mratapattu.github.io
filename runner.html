@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body class="is-preload">
 
@@ -40,12 +41,23 @@
 									<h1>Endless Runner Game Template</h1>
 									<h4>Unreal Engine 5 | 2022</h4>
 								</header>
-								<div class="image main"><img src="images/my_03.jpg" alt="" /></div>
+								<p>
+								<div class="slider">
+									<div class="slider-container">
+										<img src="images/runner3.png" alt="Image 2">
+										<img src="images/runner2.jpeg" alt="Image 1">
+										<img src="images/runner1.jpg" alt="Image 3">
+									</div>
+									<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+									<button class="next" onclick="moveSlide(1)">&#10095;</button>
+								</div>
+								</p>
 								<ul class="actions special">
-									<li><a href="https://www.unrealengine.com/marketplace/en-US/product/endless-street-runner-game-template" class="button">UE Marketplace Link</a></li>
+									<li><a href="https://www.unrealengine.com/marketplace/en-US/product/endless-street-runner-game-template" class="button" target="_blank">UE Marketplace Link</a></li>
 								</ul>
-								<p><b>ROLE : Sole Developer </b></p>
-								<p> This is a template project for an endless runner type game, similar to Subway Surfers. The player will run through procedurally generated platform while avoiding hurdles and collecting items. 
+								<p><b>ROLE: Sole Developer </b></p>
+								<p>This is a template project for an endless-runner type game, similar to Subway Surfers.
+									Players run through procedurally generated platforms, avoiding hurdles and collecting items.
 									The project has a fully functional UI system.</p>
 									
 								</section>
@@ -71,6 +83,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src='script.js'></script>
 
 	</body>
 </html>
