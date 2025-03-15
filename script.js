@@ -6,8 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function moveSlide(direction, sliderIndex) {
+function moveSlide(direction, sliderIndex = 0) { // Default to first slider if not provided
     const sliderContainers = document.querySelectorAll('.slider-container');
+
+    if (!sliderContainers[sliderIndex]) {
+        console.warn(`Slider index ${sliderIndex} does not exist.`);
+        return;
+    }
+
     const sliderContainer = sliderContainers[sliderIndex];
     const slides = sliderContainer.querySelectorAll('img');
     const totalSlides = slides.length;
@@ -15,9 +21,9 @@ function moveSlide(direction, sliderIndex) {
     currentIndices[sliderIndex] += direction;
 
     if (currentIndices[sliderIndex] < 0) {
-        currentIndices[sliderIndex] = totalSlides - 1; // Jump directly to the last image
+        currentIndices[sliderIndex] = totalSlides - 1; // Jump to last image
     } else if (currentIndices[sliderIndex] >= totalSlides) {
-        currentIndices[sliderIndex] = 0; // Jump directly to the first image
+        currentIndices[sliderIndex] = 0; // Jump to first image
     }
 
     const offset = -currentIndices[sliderIndex] * 100;
