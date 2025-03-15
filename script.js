@@ -1,19 +1,26 @@
-let currentIndex = 0;
+let currentIndices = {};
 
-function moveSlide(direction) {
-    const sliderContainer = document.querySelector('.slider-container');
-    const slides = document.querySelectorAll('.slider-container img');
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".slider").forEach((slider, index) => {
+        currentIndices[index] = 0;
+    });
+});
+
+function moveSlide(direction, sliderIndex) {
+    const sliderContainers = document.querySelectorAll('.slider-container');
+    const sliderContainer = sliderContainers[sliderIndex];
+    const slides = sliderContainer.querySelectorAll('img');
     const totalSlides = slides.length;
 
-    currentIndex += direction;
+    currentIndices[sliderIndex] += direction;
 
-    if (currentIndex < 0) {
-        currentIndex = totalSlides - 1; // Jump directly to the last image
-    } else if (currentIndex >= totalSlides) {
-        currentIndex = 0; // Jump directly to the first image
+    if (currentIndices[sliderIndex] < 0) {
+        currentIndices[sliderIndex] = totalSlides - 1; // Jump directly to the last image
+    } else if (currentIndices[sliderIndex] >= totalSlides) {
+        currentIndices[sliderIndex] = 0; // Jump directly to the first image
     }
 
-    const offset = -currentIndex * 100;
+    const offset = -currentIndices[sliderIndex] * 100;
     sliderContainer.style.transform = `translateX(${offset}%)`;
     sliderContainer.style.transition = 'transform 0.5s ease'; // Smooth slide effect
 }
